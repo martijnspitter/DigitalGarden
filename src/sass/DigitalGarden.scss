@@ -1,0 +1,68 @@
+.dg-title {
+	margin: 1rem;
+
+	font-size: 2rem;
+	font-weight: 100;
+
+	text-transform: uppercase;
+}
+
+.post-link {
+	text-decoration: none;
+	margin: 2rem 2rem;
+	transition: all .5s ease;
+	box-shadow: 0 1rem 2rem rgba(38, 70, 83, .4);
+	border-radius: 5px;
+	height: 20rem;
+	width: 25rem;
+
+	backface-visibility: hidden;
+
+	&:hover {
+		text-decoration: none;
+		transform: translateY(-.5rem) scale(1.05);
+		box-shadow: 0 2rem 2rem rgba(38, 70, 83, .7);
+	}
+}
+
+.tag-clicked {
+	border: 1px solid #264653;
+}
+
+.dg-post::first-letter {
+	float: left;
+	font-size: 8rem;
+	line-height: 1;
+	margin: -.4rem 1rem -0.9rem 0;
+	padding: 0 0 .2rem 0;
+}
+
+.dg-listItem {
+	border-left-width: 1px !important;
+	margin: .3rem .3rem;
+	border-radius: 3px !important;
+	cursor: pointer;
+	transition: all .3s ease-in;
+
+	&:hover {
+		transform: scale(1.1);
+		box-shadow: 0 1rem 2rem rgba(43, 57, 63, 0.2);
+	}
+}
+
+.dg-text {
+	backface-visibility: hidden;
+
+	animation: moveInRight 1s ease-out;
+}
+
+.dg-tags {
+	backface-visibility: hidden;
+
+	animation: moveInLeft 1s ease-out .4s backwards;
+	animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+.post-header {
+	margin-top: 2rem;
+}

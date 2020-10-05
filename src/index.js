@@ -1,17 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import './index.css';
+
+import { RecoilRoot } from 'recoil';
+import { userState } from './store/atoms';
+import { postState } from './store/atoms';
+
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import PersistenceObserver from './PersistenceObserver';
+
+const root = document.getElementById('root');
+
+// recoil state persist for user and posts.
+const initializeState = ({ set }) => {
+	if (localStorage.user) {
+		const user = localStorage.user;
+		set(userState, JSON.parse(user));
+	}
+	if (localStorage.allPosts) {
+		const allPosts = localStorage.allPosts;
+		set(postState, JSON.parse(allPosts));
+	}
+};
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+	<RecoilRoot initializeState={initializeState}>
+		<PersistenceObserver />
+		<App />
+	</RecoilRoot>,
+	root
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();

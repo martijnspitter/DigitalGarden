@@ -1,0 +1,59 @@
+@keyframes moveInLeft {
+	/* its best to only use opacity and transform in keyframes because the browsers are optimiced for that. */
+	0% {
+		opacity: 0;
+		transform: translateX(-20rem);
+	}
+	60% {
+		opacity: 0.6;
+		transform: translateX(5rem);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+@keyframes moveInRight {
+	/* its best to only use opacity and transform in keyframes because the browsers are optimiced for that. */
+	0% {
+		opacity: 0;
+		transform: translateX(10rem);
+	}
+	70% {
+		opacity: 0.6;
+		transform: translateX(-3rem);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+@keyframes moveInPost {
+	/* its best to only use opacity and transform in keyframes because the browsers are optimiced for that. */
+	0% {
+		opacity: 0;
+		transform: translateX(20rem);
+	}
+	70% {
+		opacity: 0.6;
+		transform: translateX(-1rem);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+@keyframes moveInBottom {
+	/* its best to only use opacity and transform in keyframes because the browsers are optimiced for that. */
+	0% {
+		opacity: 0;
+		transform: translateY(3rem);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
